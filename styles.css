@@ -103,8 +103,8 @@
         width: 100%;
         padding: unset;
         transform: none;
-        grid-template-columns: repeat(var(--size), 40px);
-        grid-template-rows: repeat(var(--size), 40px);
+        grid-template-columns: repeat(var(--size), 35px);
+        grid-template-rows: repeat(var(--size), 35px);
     }
     .grid > input[type=text] {
         font-size: 1.2rem;
