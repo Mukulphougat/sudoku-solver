@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.heading > h1 {
+    font-family: 'Roboto Mono', monospace;
+    align-self: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.buttons {
+    margin: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-image: linear-gradient(cyan, lightblue);
+    box-shadow: 10px 10px 16px lightblue;
+    border: 2px solid blue;
+    font-family: 'Roboto Mono', monospace;
+    color: darkgoldenrod;
+}
+
+.main {
+    width: 100%;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    flex-direction: row;
+    color: white;
+}
+
+
+
+.grid {
+    display: inline-grid;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 50px;
+    padding: 2px;
+    grid-template-columns: repeat(var(--size), 50px);
+    grid-template-rows: repeat(var(--size), 50px);
+    transform: translateX(10px);
+    gap: 1px;
+}
+
+.grid > input {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: 2px solid black;
+    user-select: none;
+    -moz-box-shadow: 10px 10px 16px cornflowerblue;
+    -webkit-box-shadow: 10px 10px 16px cornflowerblue;
+    box-shadow: 10px 10px 16px cornflowerblue;
+}
+
+.grid > input[type=text] {
+    font-weight: bolder;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 40px;
+
+}
+
+
+@media screen and (max-width: 500px) {
+    .heading > h1 {
+        font-size: 1.5rem;
+    }
+    .buttons {
+        margin: 10px;
+        width: 80px;
+        height: 40px;
+    }
+    .main {
+        width: 100%;
+        flex-direction: column;
+    }
+    .button-container {
+        flex-direction: row;
+    }
+    .grid {
+        width: 100%;
+        padding: unset;
+        transform: none;
+        grid-template-columns: repeat(var(--size), 30px);
+        grid-template-rows: repeat(var(--size), 30px);
+    }
+    .grid > input[type=text] {
+        font-size: 1.2rem;
+    }
+}
