@@ -15,7 +15,10 @@ function makeGrid() {
 }
 makeGrid()
 document.querySelector('.solver').addEventListener('click',() => {
+    const start=performance.now()
     helper(board)
+    const end=performance.now()
+    console.info(end-start)
 });
 document.querySelector('.reset').addEventListener('click',() => {
     for ( let i = 0 ; i < board.length ; i++ ) {
